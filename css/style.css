@@ -24,7 +24,7 @@
 
 section {
     width: 35%;
-    background-color: teal;
+    background-color:white;
 }
 
 .utente {
@@ -56,6 +56,7 @@ header {
 }
 
 .user-img {
+    width: 50px;
     max-height: 100%;
     margin-right: 10px;
     background-color: #f2f2f2;
@@ -137,7 +138,7 @@ header {
 
 main {
     width: 65%;
-    background-color: teal;
+    background-color:rgba(226,218,211,255);
 }
 
 .msg_chat {
