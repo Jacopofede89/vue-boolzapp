@@ -34,15 +34,15 @@
 
                     </div>
                     <div class="ricerca">
-                        <input type="text" class="search-input" placeholder="Cerca o inizia una nuova chat." autocomplete="off">
+                        <input type="text" class="search-input" placeholder="Cerca o inizia una nuova chat">
                     </div>
                     <div class="full_chat">                        
-                        <div class="aside_chat">
+                        <div class="aside_chat" v-for="contact, i in contacts" :key="i">
                             <div class="user">
-                                <img src="img/avatar_1.jpg" alt="" class="user-img">
+                                <img :src="contact.avatar" class="user-img">
                                 <div class="chat_msg">
-                                    <h4>Michele</h4>
-                                    <span>Tutto fatto! ...</span>
+                                    <h4>{{contact.userName}}</h4>
+                                    <span>{{contact.messages[contact.messages.length - 1].text}}</span>
                                 </div>
                             </div>
                             <div class="time">
@@ -50,7 +50,7 @@
                             </div>
                         </div>
 
-                        <div class="aside_chat">
+                        <!-- <div class="aside_chat">
                             <div class="user">
                                 <img src="img/avatar_2.jpg" alt="" class="user-img">
                                 <div class="chat_msg">
@@ -87,7 +87,7 @@
                             <div class="time">
                                 10/01/2020 16:15
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </section>
