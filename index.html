@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Vue Boolzapp</title>
+</head>
+<body>
+    <div class="container" id="app">
+
+        <div class="app-cont">
+            <section>
+                <header>
+                    <div class="utente">
+                        <img src="img/01.svg" alt="" class="user-img">
+                        <h4>Nome Utente</h4>
+                    </div>
+                    <div class="icone">
+                        <i class="fas fa-circle-notch"></i>
+                        <i class="fas fa-comment-alt"></i>
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                </header>
+                <div class="chat">
+                    <div class="notifiche">
+                        <i class="fas fa-bell-slash"></i>
+                        <div>
+                            <h4>Ricevi notifiche di nuovi messaggi</h4>
+                            <a href="">Attiva notifiche desktop</a>
+                        </div>
+
+                    </div>
+                    <div class="ricerca">
+                        <input type="text" class="search-input" placeholder="Cerca o inizia una nuova chat." autocomplete="off">
+                    </div>
+                    <div class="full_chat">                        
+                        <div class="aside_chat">
+                            <div class="user">
+                                <img src="img/02.svg" alt="" class="user-img">
+                                <div class="chat_msg">
+                                    <h4>Michele</h4>
+                                    <span>Tutto fatto! ...</span>
+                                </div>
+                            </div>
+                            <div class="time">
+                                10/01/2020 16:15
+                            </div>
+                        </div>
+
+                        <div class="aside_chat">
+                            <div class="user">
+                                <img src="img/02.svg" alt="" class="user-img">
+                                <div class="chat_msg">
+                                    <h4>Fabio</h4>
+                                    <span>Tutto fatto! ...</span>
+                                </div>
+                            </div>
+                            <div class="time">
+                                10/01/2020 16:15
+                            </div>
+                        </div>
+
+                        <div class="aside_chat">
+                            <div class="user">
+                                <img src="img/02.svg" alt="" class="user-img">
+                                <div class="chat_msg">
+                                    <h4>Samuele</h4>
+                                    <span>Ah scusa! ...</span>
+                                </div>
+                            </div>
+                            <div class="time">
+                                10/01/2020 16:15
+                            </div>
+                        </div>
+
+                        <div class="aside_chat">
+                            <div class="user">
+                                <img src="img/02.svg" alt="" class="user-img">
+                                <div class="chat_msg">
+                                    <h4>Luisa</h4>
+                                    <span>Si, preferirei andare al ci ...</span>
+                                </div>
+                            </div>
+                            <div class="time">
+                                10/01/2020 16:15
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <main>
+                <header>
+                    <div class="user">
+                        <img src="img/02.svg" alt="" class="user-img">
+                        <div>
+                            <h4>Michele</h4>
+                            <span>Ultimo accesso oggi alle 10/01/2020 16:15:22</span>
+                        </div>
+                    </div>
+                    <div class="icone">
+                        <i class="fas fa-search"></i>
+                        <i class="fas fa-paperclip"></i>
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                </header>
+
+                <div class="msg_chat">
+                    <div class="msg_chat_line _1">Hai portato il cane a spasso?</div>
+                    <div class="msg_chat_line _1">Ricordati di dargli da mangiare</div>
+                    <div class="msg_chat_line _2">Tutto fatto?</div>
+
+                </div>
+
+                <div class="bottom_side">
+                    <div class="img-placeholder"><i class="far fa-smile"></i></div>
+                    <input class="bottom_text" placeholder="Scrivi un messaggio">
+                    <div class="img-placeholder"><i class="fas fa-microphone"></i></div>
+                </div>
+            </main>
+
+        </div>
+
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
