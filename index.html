@@ -34,7 +34,8 @@
 
                     </div>
                     <div class="ricerca">
-                        <input type="text" class="search-input" placeholder="Cerca o inizia una nuova chat">
+                        <i class="fas fa-search"></i>
+                        <input type="text" class="ricerca-input" placeholder="Cerca o inizia una nuova chat">
                     </div>
                     <div class="full_chat">                        
                         <div class="aside_chat" v-for="contact, i in contacts" :key="i">
@@ -46,7 +47,7 @@
                                 </div>
                             </div>
                             <div class="time">
-                                10/01/2020 16:15
+                                {{contact.messages[contact.messages.length - 1].date}}
                             </div>
                         </div>
 
