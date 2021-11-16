@@ -6,6 +6,7 @@ var app = new Vue({
             avatar: 'img/avatar_1.jpg',
             visible: true,
         },
+        activeContacts: 0,
         contacts: [
             {
                 userName: 'Michele',
@@ -91,5 +92,6 @@ var app = new Vue({
                 ],   
             }, 
         ]
+        
     }
 })

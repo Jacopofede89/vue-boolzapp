@@ -55,7 +55,7 @@ header {
     align-items: center;
 }
 
-.user-img {
+.utente-img {
     width: 50px;
     max-height: 100%;
     margin-right: 10px;
@@ -161,13 +161,16 @@ main {
     border-radius: 10px;
 }
 
-.msg_chat_line._1 {
+.msg_chat_line.sent {
     align-self: flex-end;
 }
 
 
-.msg_chat_line._2{
+.msg_chat_line.received{
     background-color: white;
+}
+.active{
+    display: block;
 }
 .bottom_text {
     height: 100%;
