@@ -1,12 +1,14 @@
-var app = new Vue({
+var app = new Vue (
+    {
     el: '#app',
     data: {
+        
         user: {
             userName: 'Carlo Carli',
             avatar: 'img/avatar_1.jpg',
             visible: true,
         },
-        activeContacts: 0,
+        activeContact: 0,
         contacts: [
             {
                 userName: 'Michele',
@@ -33,7 +35,7 @@ var app = new Vue({
             {   
                 userName:   'Fabio',   
                 avatar:   'img/avatar_2.jpg',   
-                visible:   true,   
+                visible:   false,   
                 messages:   [   
                     {   
                         date:   '20/03/2020   16:30:00',   
@@ -55,7 +57,7 @@ var app = new Vue({
             {   
                 userName:   'Samuele',   
                 avatar:   'img/avatar_3.jpg',   
-                visible:   true,   
+                visible:   false,   
                 messages:   [   
                     {   
                         date:   '28/03/2020   10:10:40',   
@@ -77,7 +79,7 @@ var app = new Vue({
             {   
                 userName:   'Luisa',   
                 avatar:   'img/avatar_4.jpg',   
-                visible:   true,   
+                visible:   false,   
                 messages:   [   
                     {   
                         date:   '10/01/2020   15:30:55',   
@@ -93,5 +95,22 @@ var app = new Vue({
             }, 
         ]
         
-    }
-})
+        
+    },
+    
+    methods: {
+        chatSwap: function (index) {
+            this.activeContact = index;
+        },
+        
+        
+
+    },
+        
+
+        
+    
+    
+    
+
+});

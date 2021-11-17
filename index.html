@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300&family=Roboto:wght@100;300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Vue Boolzapp</title>
@@ -33,12 +36,14 @@
                         </div>
 
                     </div>
+                    
                     <div class="ricerca">
                         <i class="fas fa-search"></i>
                         <input type="text" class="ricerca-input" placeholder="Cerca o inizia una nuova chat">
                     </div>
+                    
                     <div class="full_chat">                        
-                        <div class="aside_chat" v-for="contact, i in contacts" :key="i">
+                        <div @click="chatSwap(i)" class="aside_chat" v-for="contact, i in contacts" :key="i">
                             <div class="utente">
                                 <img :src="contact.avatar" class="utente-img">
                                 <div class="chat_msg">
@@ -57,11 +62,9 @@
             <main>
                 <header>
                     <div class="utente">
-                        <img src="img/avatar_1.jpg" alt="" class="utente-img">
-                        <div>
-                            <h4>Michele</h4>
-                            <span>Ultimo accesso oggi alle 10/01/2020 16:15:22</span>
-                        </div>
+                        <img :src="contacts[activeContact].avatar" class="utente-img">
+                        <h4>{{contacts[activeContact].userName}}</h4>
+                        <span>Ultimo accesso {{contacts[activeContact].messages[contacts[activeContact].messages.length - 1].date}}</span>
                     </div>
                     <div class="icone">
                         <i class="fas fa-search"></i>
@@ -70,8 +73,8 @@
                     </div>
                 </header>
 
-                <div class="msg_chat" v-for="contact, i in contacts">
-                    <div v-for="message in contact.messages" class="msg_chat_line" :class="message.status">{{message.text}} 
+                <div class="msg_chat">
+                    <div v-for="message in contacts[activeContact].messages" class="msg_chat_line" :class="message.status">{{message.text}} 
                         <span class="time">{{message.date}}</span>
                     </div>
                 </div>
