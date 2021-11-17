@@ -2,7 +2,11 @@ var app = new Vue (
     {
     el: '#app',
     data: {
-        
+        sendMessage: {
+            date: "now",
+            text: "",
+            status: "sent",
+        },
         user: {
             userName: 'Carlo Carli',
             avatar: 'img/avatar_1.jpg',
@@ -99,18 +103,30 @@ var app = new Vue (
     },
     
     methods: {
-        chatSwap: function (index) {
-            this.activeContact = index;
+        chatSwap: function (x) {
+            this.activeContact = x;
         },
-        
+        addNewMessage(y){
+            if(this.sendMessage.text !== ""){
+               this.contacts[y].messages.push(this.sendMessage);
+               this.sendMessage = {
+                   date: new Date().toLocaleDateString(),
+                   text: "",
+                   status: 'sent'
+                }; 
+            };
+            setTimeout(() => {
+                let reply =  {   
+                    date:'now',   
+                    text:'ok',   
+                    status:'received'  
+                    };
+                    this.contacts[this.activeContact].messages.push(reply);
+                    
+            }, 1000);
+            
+        },
         
 
     },
-        
-
-        
-    
-    
-    
-
 });

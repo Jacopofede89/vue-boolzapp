@@ -64,7 +64,7 @@
                     <div class="utente">
                         <img :src="contacts[activeContact].avatar" class="utente-img">
                         <h4>{{contacts[activeContact].userName}}</h4>
-                        <span>Ultimo accesso {{contacts[activeContact].messages[contacts[activeContact].messages.length - 1].date}}</span>
+                        <span> Ultimo accesso {{contacts[activeContact].messages[contacts[activeContact].messages.length - 1].date}}</span>
                     </div>
                     <div class="icone">
                         <i class="fas fa-search"></i>
@@ -82,7 +82,7 @@
 
                 <div class="bottom_side">
                     <div class="img-placeholder"><i class="far fa-smile"></i></div>
-                    <input class="bottom_text" placeholder="Scrivi un messaggio">
+                    <input class="bottom_text" placeholder="Scrivi un messaggio" v-model="sendMessage.text" @keydown.enter="addNewMessage(activeContact)">
                     <div class="img-placeholder"><i class="fas fa-microphone"></i></div>
                 </div>
             </main>
