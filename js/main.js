@@ -12,6 +12,7 @@ var app = new Vue (
             avatar: 'img/avatar_1.jpg',
             visible: true,
         },
+        search:"",
         activeContact: 0,
         contacts: [
             {
@@ -39,7 +40,7 @@ var app = new Vue (
             {   
                 userName:   'Fabio',   
                 avatar:   'img/avatar_2.jpg',   
-                visible:   false,   
+                visible:   false,
                 messages:   [   
                     {   
                         date:   '20/03/2020   16:30:00',   
@@ -61,7 +62,7 @@ var app = new Vue (
             {   
                 userName:   'Samuele',   
                 avatar:   'img/avatar_3.jpg',   
-                visible:   false,   
+                visible:   false,
                 messages:   [   
                     {   
                         date:   '28/03/2020   10:10:40',   
@@ -83,7 +84,7 @@ var app = new Vue (
             {   
                 userName:   'Luisa',   
                 avatar:   'img/avatar_4.jpg',   
-                visible:   false,   
+                visible:   false, 
                 messages:   [   
                     {   
                         date:   '10/01/2020   15:30:55',   
@@ -129,4 +130,6 @@ var app = new Vue (
         
 
     },
+    
+    
 });

@@ -13,7 +13,6 @@
 </head>
 <body>
     <div class="container" id="app">
-
         <div class="app-cont">
             <section>
                 <header>
@@ -39,11 +38,11 @@
                     
                     <div class="ricerca">
                         <i class="fas fa-search"></i>
-                        <input type="text" class="ricerca-input" placeholder="Cerca o inizia una nuova chat">
+                        <input type="text" class="ricerca-input" v-model="search" placeholder="Cerca o inizia una nuova chat">
                     </div>
                     
                     <div class="full_chat">                        
-                        <div @click="chatSwap(i)" class="aside_chat" v-for="contact, i in contacts" :key="i">
+                        <div @click="chatSwap(i)" class="aside_chat" v-for="contact, i in contacts" v-if="contact.userName.toLowerCase().includes(search.toLowerCase())" :key="i">
                             <div class="utente">
                                 <img :src="contact.avatar" class="utente-img">
                                 <div class="chat_msg">
@@ -63,9 +62,12 @@
                 <header>
                     <div class="utente">
                         <img :src="contacts[activeContact].avatar" class="utente-img">
-                        <h4>{{contacts[activeContact].userName}}</h4>
-                        <span> Ultimo accesso {{contacts[activeContact].messages[contacts[activeContact].messages.length - 1].date}}</span>
+                        <div class="utente_header">
+                            <h4>{{contacts[activeContact].userName}}</h4>
+                            <span> Ultimo accesso {{contacts[activeContact].messages[contacts[activeContact].messages.length - 1].date}}</span>
+                        </div>                    
                     </div>
+                    
                     <div class="icone">
                         <i class="fas fa-search"></i>
                         <i class="fas fa-paperclip"></i>
