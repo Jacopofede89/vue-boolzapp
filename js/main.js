@@ -111,7 +111,7 @@ var app = new Vue (
             if(this.sendMessage.text !== ""){
                this.contacts[y].messages.push(this.sendMessage);
                this.sendMessage = {
-                   date: new Date().toLocaleDateString(),
+                   date: "now",
                    text: "",
                    status: 'sent'
                 }; 
@@ -121,8 +121,8 @@ var app = new Vue (
                     date:'now',   
                     text:'ok',   
                     status:'received'  
-                    };
-                    this.contacts[this.activeContact].messages.push(reply);
+                };
+                this.contacts[this.activeContact].messages.push(reply);
                     
             }, 1000);
             
